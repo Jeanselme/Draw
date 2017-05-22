@@ -9,5 +9,8 @@ The script display.py takes for argument the name of the file and save the assoc
 The result is an image where the color goes from light blue (first line) to dark one (end of draw). - OPTION NON AVALAIBLE (absence of time in data)  
 Other options are available : '-h' for displaying them.
 
+## Analysis
+The script analysis.py computes some simple analysis, however, due to the large amount of data, the computation can take a long time.
+
 ## Dependencies
-Executed with python3.5 with matplotlib library
+Executed with python3.5 with matplotlib library		
