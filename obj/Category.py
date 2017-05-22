@@ -11,7 +11,7 @@ class Category:
         self.path = path
         self.images = []
 
-    def extractJson(self, numberOfImage):
+    def extractJson(self, numberOfImage = None):
         """
             Opens the json file and extract only numberOfImage
         """
@@ -33,3 +33,16 @@ class Category:
         """
         for i, image in enumerate(self.images):
             image.plot(color, dimension, os.path.join(savePath, self.fileName + "_{}.png".format(i)))
+
+    def success(self):
+        """
+            Computes the percentage of success
+        """
+        success , defeat = 0, 0
+        for image in self.images:
+            if image.recognized:
+                success += 1
+            else:
+                defeat += 1
+
+        return success/(success + defeat)
